@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", () =>
 
   document.querySelector("#validate").addEventListener("click", (e)=>
   {
-    //TODO: figure out why it skips checking length and is always true for the second if statement
-    if(pw1.length < 8)
+    if((pw1.value).length < 8)
     {
       alert("Password must be 8 or more characters!");
     }
-    else if(pw1!=pw2)
+    else if((pw1.value)!=(pw2.value))
     {
       alert("Password does not match!");
+    }
+    else
+    {
+      alert("Success!");
     }
   });
 
