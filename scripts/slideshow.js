@@ -1,26 +1,36 @@
 let slideIndex = 1;
-show(slideIndex);
 
-function DivMod(n)
+show(slideIndex)
+
+function changeSlide(n)
 {
   show(slideIndex += n);
+  console.log("here");
 
 }
 
+
 function show(n)
 {
-  let x = document.getElementsByClassName("slideshow");
-  if(n > x.length)
+  if(n > 5)
   {
     slideIndex = 1;
   }
   if(n<1)
   {
-    slideIndex = x.length;
+    slideIndex = 5;
   }
-  for(let i=0; i<x.length; i++)
+
+  let img = document.getElementById("img" + n);
+  let tempImg;
+  for(let i = 1; i<6; i++)
   {
-    x[i].style.display = "none";
+    tempImg = document.getElementById("img" + i);
+    tempImg.style.visibility = 'hidden';
   }
-  x[slideIndex-1].style.display = "block";
+  img.style.visibility = 'visible';
+
+  img.width = 1000;
+  img.height = 500;
+
 }
