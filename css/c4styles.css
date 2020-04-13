@@ -1,0 +1,23 @@
+.button
+{
+  height : 100 px;
+  width : 100 px;
+  background-color: red;
+  border-radius: 100%;
+  padding: 20px;
+  display: inline-block;
+}
+div.row
+{
+  column-count: 7;
+}
+
+p.tile
+{
+  height : 100 px;
+  width : 100 px;
+  background-color: grey;
+  border-radius: 100%;
+  padding: 20px;
+  display: inline-block;
+}
